@@ -10,7 +10,7 @@ Open `index.html` in your browser (double-click the file or drag it into a tab).
 
 - `index.html` — all the sections and content  
 - `CSS/styles.css` — layout and look  
-- `Images/` — logos, photos for the gallery, hero background, etc.
+- `Images/` — logos, photos for the gallery 
 
 If an image path breaks after you move files, check that the `Images` folder name matches what’s in the HTML (capital **I** matters on some hosts).
 
