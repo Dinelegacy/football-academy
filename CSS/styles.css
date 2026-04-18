@@ -1,5 +1,3 @@
-/* Bigni-Oubo Football Académie — design system */
-
 :root {
   --color-bg: #0c0f12;
   --color-surface: #141a1f;
@@ -16,16 +14,13 @@
   --radius-md: 12px;
   --shadow-soft: 0 24px 48px rgba(0, 0, 0, 0.35);
   --transition: 0.25s ease;
-  /* One carousel width + one aspect frame on every breakpoint */
   --gallery-max: min(960px, calc(100vw - 1.5rem));
   --gallery-aspect: 4 / 3;
   --section-y: clamp(2.75rem, 8vw, 6rem);
-  /* Matches common crest / logo mat (off-white) */
   --nav-strip-bg: #f5f5f3;
   --nav-strip-border: rgba(0, 0, 0, 0.08);
   --nav-text: rgba(22, 26, 30, 0.88);
 }
-
 *,
 *::before,
 *::after {
@@ -48,7 +43,6 @@ body {
   padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
 }
 
-/* ——— Hero ——— */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -96,7 +90,6 @@ body {
   padding-bottom: clamp(0.35rem, 1.5vh, 0.75rem);
 }
 
-/* Mobile hero: same treatment as desktop — no card, text on overlay only */
 @media (max-width: 767.98px) {
   .hero {
     min-height: 100dvh;
@@ -134,7 +127,6 @@ body {
   }
 }
 
-/* Row height follows content only — avoids huge gaps above/below text */
 .hero__row {
   padding-top: 0.2rem;
   padding-bottom: 0.5rem;
@@ -269,7 +261,6 @@ body {
   color: #061208 !important;
 }
 
-/* ——— Navigation ——— (light strip aligned with logo / crest mat) */
 .site-nav {
   position: relative;
   z-index: 10;
@@ -310,7 +301,6 @@ body {
   color: #064018 !important;
 }
 
-/* Nav lockup: crest + rule + wordmark (club / federation style, no glass card) */
 .site-nav__logo-wrap {
   display: inline-flex;
   align-items: center;
@@ -325,7 +315,6 @@ body {
   box-shadow: none;
 }
 
-/* Multiply knocks flat white JPEG/PNG boxes into --nav-strip-bg (replace with true transparent asset for best result) */
 .site-nav__logo {
   display: block;
   height: 40px;
@@ -416,7 +405,6 @@ body {
   }
 }
 
-/* ——— Sections ——— */
 .section {
   padding: var(--section-y) 0;
 }
@@ -462,7 +450,6 @@ body {
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* Stats */
 .stats-strip {
   padding: clamp(1.75rem, 5vw, 2.5rem) 0 !important;
 }
@@ -489,7 +476,6 @@ body {
   padding-inline: 0.25rem;
 }
 
-/* Feature cards */
 .feature-card {
   background: var(--color-surface-elevated);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -530,7 +516,6 @@ body {
   font-size: 0.98rem;
 }
 
-/* Gallery — identical frame on mobile & desktop (width scales with --gallery-max only) */
 .gallery-carousel-wrap {
   margin-top: clamp(1.25rem, 4vw, 2rem);
   width: 100%;
@@ -555,7 +540,6 @@ body {
   background: var(--color-bg);
 }
 
-/* Same box every slide; contain keeps full subjects in frame */
 .gallery-slide__img {
   position: absolute;
   inset: 0;
@@ -594,7 +578,6 @@ body {
   height: 1.25rem;
 }
 
-/* Partners — uniform tiles so every mark reads at the same visual size */
 .partners {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -651,17 +634,14 @@ body {
   transform: scale(1.04);
 }
 
-/* Flatten white box on academy mark inside light tiles */
 .partner-logo--knockout {
   mix-blend-mode: multiply;
 }
 
-/* Nike / dark monochrome marks: keep crisp on light tile */
 .partner-cell .partner-logo:not(.partner-logo--knockout) {
   filter: contrast(1.05);
 }
 
-/* CTA band */
 .cta-band {
   background: linear-gradient(135deg, var(--color-accent-dim) 0%, #007a3d 100%);
   color: #fff;
@@ -701,8 +681,6 @@ body {
     width: 100%;
   }
 }
-
-/* Footer */
 .site-footer {
   background: var(--color-bg);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -769,8 +747,6 @@ body {
   border: 1px solid var(--nav-strip-border);
   border-radius: 10px;
 }
-
-/* Mobile / tablet: menu panel matches light bar */
 @media (max-width: 991.98px) {
   .site-nav .navbar-collapse {
     margin-top: 0.75rem;
@@ -780,11 +756,9 @@ body {
     border: 1px solid var(--nav-strip-border);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
   }
-
   .site-nav .navbar-nav {
     gap: 0.15rem;
   }
-
   .site-nav .navbar-nav .nav-link {
     padding: 0.7rem 0.85rem !important;
     border-radius: 10px;
@@ -797,7 +771,6 @@ body {
   }
 }
 
-/* Partner tiles on narrow phones */
 @media (max-width: 575.98px) {
   .partners {
     gap: 0.75rem;
